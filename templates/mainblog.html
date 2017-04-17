@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content%}
+{% for writeblogtext in blogs %}
+
+     <div><h2><a href="/blog/{{writeblogtext.key().id()}}">{{writeblogtext.title}}</a></h2></div>
+     <div><h3>{{writeblogtext.blogtext}} </h3> </div>
+{% endfor %}
+
+{% endblock %}
